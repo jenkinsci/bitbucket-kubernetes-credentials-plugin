@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Integrates bitbucketToken credential type from the atlassian-bitbucket-server-integration-plugin with the k8s credential provider.
+</div>
