@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>3.37</version>
+        <version>4.42</version>
         <relativePath />
     </parent>
     
@@ -28,10 +28,10 @@
     </scm>
 
     <properties>
-        <jenkins.version>2.222.3</jenkins.version>
+        <jenkins.version>2.289.3</jenkins.version>
         <java.level>8</java.level>
     </properties>
-    <name>Bitbucket Credentials - Kubernetes Intergration</name>
+    <name>Bitbucket Credentials - Kubernetes Integration</name>
     <description>Integrates bitbucket credentials with the k8s credential provider</description>
     <licenses>
         <license>
@@ -39,74 +39,64 @@
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jenkins.tools.bom</groupId>
+                <artifactId>bom-2.289.x</artifactId>
+                <version>1438.v6a_2c29d73f82</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>io.jenkins.plugins</groupId>
+                <artifactId>atlassian-bitbucket-server-integration</artifactId>
+                <version>3.2.2</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-annotations</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-databind</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jenkins-ci</groupId>
+                        <artifactId>trilead-ssh2</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.cloudbees.jenkins.plugins</groupId>
+                <artifactId>kubernetes-credentials-provider</artifactId>
+                <version>0.20</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>com.cloudbees.jenkins.plugins</groupId>
             <artifactId>kubernetes-credentials-provider</artifactId>
-            <version>0.14</version>
         </dependency>
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>atlassian-bitbucket-server-integration</artifactId>
-            <version>1.1.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>ssh-credentials</artifactId>
-            <version>1.14</version>
-        </dependency>
-        <!-- logging -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.26</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.26</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
-            <version>1.7.26</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-            <version>1.7.26</version>
-        </dependency>
-        
-        
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/credentials -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>credentials</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>3.3.3</version>
+            <version>4.6.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-core</artifactId>
-            <version>2.0.7</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito2</artifactId>
-            <version>2.0.7</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-module-junit4</artifactId>
-            <version>2.0.7</version>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>4.6.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

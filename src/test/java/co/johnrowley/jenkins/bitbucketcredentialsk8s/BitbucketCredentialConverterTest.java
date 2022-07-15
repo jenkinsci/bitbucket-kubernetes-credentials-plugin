@@ -30,15 +30,12 @@ import hudson.util.HistoricalSecrets;
 import io.fabric8.kubernetes.api.model.Secret;
 import io.fabric8.kubernetes.client.utils.Serialization;
 import jenkins.security.ConfidentialStore;
+import org.junit.BeforeClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
-import org.powermock.api.mockito.PowerMockito;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 import java.io.InputStream;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -49,18 +46,19 @@ import static org.junit.Assert.fail;
  * Tests for {@link BitbucketCredentialConverter}.
  */
 @Extension
-@RunWith(PowerMockRunner.class)
-@PrepareForTest({ConfidentialStore.class, HistoricalSecrets.class})
-@PowerMockIgnore({"javax.crypto.*" }) // https://github.com/powermock/powermock/issues/294
 public class BitbucketCredentialConverterTest {
+
+    @BeforeClass
+    public static void mockConfidentialStore() {
+        Mockito.mockStatic(ConfidentialStore.class);
+        Mockito.mockStatic(HistoricalSecrets.class);
+    }
+
     @Before
-    public void mockConfidentialStore() {
-        PowerMockito.mockStatic(ConfidentialStore.class);
+    public void before() {
         ConfidentialStore csMock = Mockito.mock(ConfidentialStore.class);
         Mockito.when(ConfidentialStore.get()).thenReturn(csMock);
         Mockito.when(csMock.randomBytes(ArgumentMatchers.anyInt())).thenAnswer( it -> new byte[ (Integer)(it.getArguments()[0])] );
-
-        PowerMockito.mockStatic(HistoricalSecrets.class); // return null rather than go looking up Jenkins.getInstance....
     }
 
     @Test
