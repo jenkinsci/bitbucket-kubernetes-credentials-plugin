@@ -34,7 +34,7 @@
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/bitbucket-kubernetes-credentials-plugin</gitHubRepo>
-        <jenkins.version>2.289.3</jenkins.version>
+        <jenkins.version>2.303.3</jenkins.version>
     </properties>
     <name>Bitbucket Credentials - Kubernetes Integration</name>
     <description>Integrates bitbucket credentials with the k8s credential provider</description>
@@ -79,7 +79,7 @@
             <dependency>
                 <groupId>com.cloudbees.jenkins.plugins</groupId>
                 <artifactId>kubernetes-credentials-provider</artifactId>
-                <version>0.20</version>
+                <version>0.22</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
