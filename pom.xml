@@ -34,7 +34,7 @@
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/bitbucket-kubernetes-credentials-plugin</gitHubRepo>
-        <jenkins.version>2.303.3</jenkins.version>
+        <jenkins.version>2.319.3</jenkins.version>
     </properties>
     <name>Bitbucket Credentials - Kubernetes Integration</name>
     <description>Integrates bitbucket credentials with the k8s credential provider</description>
@@ -48,38 +48,10 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.289.x</artifactId>
-                <version>1500.ve4d05cd32975</version>
+                <artifactId>bom-2.319.x</artifactId>
+                <version>1542.vc795072f7236</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>io.jenkins.plugins</groupId>
-                <artifactId>atlassian-bitbucket-server-integration</artifactId>
-                <version>3.2.2</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jenkins-ci</groupId>
-                        <artifactId>trilead-ssh2</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.cloudbees.jenkins.plugins</groupId>
-                <artifactId>kubernetes-credentials-provider</artifactId>
-                <version>0.22</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -91,6 +63,30 @@
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>atlassian-bitbucket-server-integration</artifactId>
+            <version>3.2.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jenkins-ci</groupId>
+                    <artifactId>trilead-ssh2</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.cloudbees.jenkins.plugins</groupId>
+            <artifactId>kubernetes-credentials-provider</artifactId>
+            <version>1.196.va_55f5e31e3c2</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
