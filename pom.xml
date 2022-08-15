@@ -49,7 +49,7 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-2.319.x</artifactId>
-                <version>1542.vc795072f7236</version>
+                <version>1577.v63609d9cb_5dc</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -80,6 +80,10 @@
                 <exclusion>
                     <groupId>org.jenkins-ci</groupId>
                     <artifactId>trilead-ssh2</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpcore</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
