@@ -64,7 +64,7 @@
         <dependency>
             <groupId>com.cloudbees.jenkins.plugins</groupId>
             <artifactId>kubernetes-credentials-provider</artifactId>
-            <version>1.201.v11b_14c7a_0772</version>
+            <version>1.208.v128ee9800c04</version>
         </dependency>
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
