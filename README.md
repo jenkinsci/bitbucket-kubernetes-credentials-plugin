@@ -1,9 +1,9 @@
 # bitbucket-kubernetes-credentials-plugin
 
-[![Build Status](https://ci.jenkins.io/job/Plugins/job/bitbucket-kubernetes-credentials-plugin/job/master/badge/icon)](https://ci.jenkins.io/job/Plugins/job/bitbucket-kubernetes-credentials-plugin/job/master/)
+[![Build Status](https://ci.jenkins.io/job/Plugins/job/bitbucket-kubernetes-credentials-plugin/job/main/badge/icon)](https://ci.jenkins.io/job/Plugins/job/bitbucket-kubernetes-credentials-plugin/job/main/)
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/bitbucket-kubernetes-credentials.svg)](https://plugins.jenkins.io/bitbucket-kubernetes-credentials)
 [![GitHub release](https://img.shields.io/github/release/jenkinsci/bitbucket-kubernetes-credentials-plugin.svg?label=changelog)](https://github.com/jenkinsci/bitbucket-kubernetes-credentials-plugin/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/jenkinsci/bitbucket-kubernetes-credentials-plugin)](https://github.com/jenkinsci/bitbucket-kubernetes-credentials-plugin/blob/master/LICENSE.md)
+[![GitHub license](https://img.shields.io/github/license/jenkinsci/bitbucket-kubernetes-credentials-plugin)](https://github.com/jenkinsci/bitbucket-kubernetes-credentials-plugin/blob/main/LICENSE.md)
 [![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/bitbucket-kubernetes-credentials.svg?color=blue)](https://plugins.jenkins.io/bitbucket-kubernetes-credentials)
 
 
