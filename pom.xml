@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.67</version>
+        <version>4.68</version>
         <relativePath />
     </parent>
     
@@ -34,7 +34,7 @@
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/bitbucket-kubernetes-credentials-plugin</gitHubRepo>
-        <jenkins.version>2.387.3</jenkins.version>
+        <jenkins.version>2.401.1</jenkins.version>
     </properties>
     <name>Bitbucket Credentials - Kubernetes Integration</name>
     <description>Integrates bitbucket credentials with the k8s credential provider</description>
@@ -48,8 +48,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.387.x</artifactId>
-                <version>2179.v0884e842b_859</version>
+                <artifactId>bom-2.401.x</artifactId>
+                <version>2198.v39c76fc308ca</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
