@@ -13,17 +13,6 @@
     <version>${changelist}</version>
     <packaging>hpi</packaging>
 
-    <developers>
-        <developer>
-            <id>johnrowl</id>
-            <name>John Rowley</name>
-        </developer>
-        <developer>
-            <id>jonesbusy</id>
-            <name>Valentin Delaye</name>
-        </developer>
-    </developers>
-
     <scm>
         <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
         <developerConnection>scm:git:https@github.com:${gitHubRepo}.git</developerConnection>
@@ -52,11 +41,6 @@
                 <version>3435.v238d66a_043fb_</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>org.jenkins-ci.modules</groupId>
-                <artifactId>instance-identity</artifactId>
-                <version>201.vd2a_b_5a_468a_a_6</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
