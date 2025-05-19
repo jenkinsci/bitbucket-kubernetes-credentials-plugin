@@ -54,7 +54,7 @@
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>atlassian-bitbucket-server-integration</artifactId>
-            <version>4.1.4</version>
+            <version>4.2.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.fasterxml.jackson.core</groupId>
