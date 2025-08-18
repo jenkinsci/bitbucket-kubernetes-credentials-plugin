@@ -26,6 +26,7 @@
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
         <jenkins.baseline>2.504</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.1</jenkins.version>
+        <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
     </properties>
     <name>Bitbucket Credentials - Kubernetes Integration</name>
     <description>Integrates bitbucket credentials with the k8s credential provider</description>
