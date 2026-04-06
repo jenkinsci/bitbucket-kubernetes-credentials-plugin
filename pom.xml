@@ -24,7 +24,7 @@
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/bitbucket-kubernetes-credentials-plugin</gitHubRepo>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-        <jenkins.baseline>2.516</jenkins.baseline>
+        <jenkins.baseline>2.528</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.3</jenkins.version>
         <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
         <ban-commons-lang-2.skip>false</ban-commons-lang-2.skip>
@@ -42,7 +42,7 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-${jenkins.baseline}.x</artifactId>
-                <version>5888.vd99c2b_38128d</version>
+                <version>6237.v4da_61a_4a_19e5</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
